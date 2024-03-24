@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
+
+    <title>Javascript is a love affair.</title>
+
+    <style>
+        canvas {
+            border: 2px;
+            background-color: white;
+            display: block;
+            margin: auto;
+        }
+        
+        
+    </style>
+
+</head>
+
+<body onload="startGame()">
+    <script>
+
+        var blackmyGamePiece, greymyGamePiece, pinkmyGamePiece, purplemyGamePiece, greenmyGamePiece, orangemyGamePiece, bluemyGamePiece;
+
+        function startGame() {
+            blackmyGamePiece = new component(40, 40, "black", 40, 150 );
+            greymyGamePiece = new component(40, 40, "grey", 40, 300);
+            pinkmyGamePiece = new component(30, 30, "pink", 520, 140); 
+            purplemyGamePiece = new component(30,30, "purple",680, 140);
+            greenmyGamePiece = new component(40, 40, "green", 800, 140);
+            orangemyGamePiece = new component(40, 40, "orange", 800,220);
+            redmyGamePiece = new component(40, 40, "red", 800,300);
+            whitemyGamePiece = new component(40, 40, "blue", 800,140);
+           bluemyGamePiece = new rotatingComponent(40, 40, "darkblue", 350, 250, 70, Math.PI / 180);
+
+            myGameArea.start();
+        }
+
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function () {
+                this.canvas.width = 1000;
+                this.canvas.height = 500;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 20);
+            },
+            clear: function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
+        function rotatingComponent(width, height, color, centerX, centerY, radius, angularVelocity) {
+            this.width = width;
+            this.height = height;
+            this.centerX = centerX;
+            this.centerY = centerY;
+            this.radius = radius;
+            this.angularVelocity = angularVelocity;
+            
+            this.update = function () {
+                ctx = myGameArea.context;
+                var x = this.centerX + this.radius * Math.cos(this.angularVelocity);
+                var y = this.centerY + this.radius * Math.sin(this.angularVelocity);
+                ctx.fillStyle = color;
+                ctx.fillRect(x - this.width / 2, y - this.height / 2, this.width, this.height);
+
+               
+                this.angularVelocity += 0.1;
+                
+            }
+            
+        }
+
+        function component(width, height, color, x, y) {
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+            this.update = function () {
+                ctx = myGameArea.context;
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+   
+
+        function updateGameArea() {
+           // myGameArea.clear();
+            
+
+            if (blackmyGamePiece.y < 300) {
+                blackmyGamePiece.y += 2;
+            }
+            if (greymyGamePiece.x < 150) {
+                greymyGamePiece.x += 1;
+            }
+            if (pinkmyGamePiece.y < 300) {
+                pinkmyGamePiece.y += 2;
+                pinkmyGamePiece.x += 1;
+            }
+            if (purplemyGamePiece.y <300){
+                purplemyGamePiece.y +=2;
+                purplemyGamePiece.x -=1;
+            }
+            if (greenmyGamePiece.x <900){
+                greenmyGamePiece.x +=1;
+            }
+            if (orangemyGamePiece.x <900){
+                orangemyGamePiece.x +=1;
+            }
+            if (redmyGamePiece.x <900){
+                redmyGamePiece.x +=1;
+            }
+            if (whitemyGamePiece.y < 300) {
+                whitemyGamePiece.y += 2;
+            }
+            
+            
+            pinkmyGamePiece.update();
+            blackmyGamePiece.update();
+            greymyGamePiece.update();
+            purplemyGamePiece.update();
+            greenmyGamePiece.update();
+            orangemyGamePiece.update();
+            redmyGamePiece.update();
+            whitemyGamePiece.update();
+            bluemyGamePiece.update();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

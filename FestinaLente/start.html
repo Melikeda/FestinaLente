@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #wholepage {
+            max-width: 700px;
+            min-height: 500px;
+            border-style: solid;
+            border-width: 2px;
+            margin: auto;
+        }
+
+        #sky {
+            width: 700px;
+            min-height: 60px;
+            background-color: rgb(0, 160, 219);
+            animation-name: changeColor;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            margin: auto;
+        }
+
+        #earth {
+            width: 700px;
+            height: 150px;
+            background-color: rgb(0, 160, 219);
+            animation-name: changeColor;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            margin: auto;
+        }
+
+        #magma {
+            width: 700px;
+            min-height: 250px;
+            background-color: rgb(27, 190, 57);
+            margin: auto;
+        }
+        #sun{
+            
+            animation-name: example;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes example {
+            from {
+                fill: yellow;
+                stroke: yellow;
+            }
+
+            to {
+                fill: darkblue;
+                stroke: darkblue;
+            }
+        }
+        @keyframes changeColor {
+            from {
+                background-color:rgb(0, 160, 219);
+            }
+
+            to {
+                background-color: darkblue;
+            }
+        }
+        #mountain{
+            background-color: rgb(126, 87, 37);
+        }
+        #cloud {
+            animation-name: changeCloudColor;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            fill: blue;
+        }
+        @keyframes changeCloudColor {
+            from {
+                fill: white;
+            }
+
+            to {
+                fill: darkblue;
+            }
+        }
+        #star{
+            animation-name: bul;
+            animation-duration: 4s;   
+        }
+         
+        
+
+        @keyframes bul {
+            from {
+                fill: rgb(0, 160, 219);
+                stroke: rgb(0, 160, 219);
+            }
+
+            to {
+                fill: yellow;
+                stroke: yellow;
+            }
+        }
+
+        #exp{
+            width: 700px;
+            height: 150px;
+            margin: auto;
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+
+        }
+        
+
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wholepage">
+
+        <header id="sky">
+        
+
+            
+            <svg width="700" height="100">
+                <circle id="cloud" cx="50" cy="50" r="20" fill="white" />
+                <circle id="cloud" cx="70" cy="41" r="20" fill="white" />
+                <circle id="cloud" cx="90" cy="35" r="20" fill="white" />
+                <circle id="cloud" cx="110" cy="37" r="20" fill="white" />
+                <circle id="cloud" cx="130" cy="42" r="20" fill="white" />
+                <circle id="cloud" cx="150" cy="48" r="20" fill="white" />
+                <circle id="cloud" cx="70" cy="59" r="20" fill="white" />
+                <circle id="cloud" cx="90" cy="61" r="20" fill="white" />
+                <circle id="cloud" cx="110" cy="62" r="20" fill="white" />
+                <circle id="cloud" cx="130" cy="59" r="20" fill="white" />
+
+                <circle id="cloud" cx="350" cy="50" r="20" fill="white" />
+                <circle id="cloud" cx="370" cy="41" r="20" fill="white" />
+                <circle id="cloud" cx="390" cy="35" r="20" fill="white" />
+                <circle id="cloud" cx="410" cy="37" r="20" fill="white" />
+                <circle id="cloud" cx="430" cy="42" r="20" fill="white" />
+                <circle id="cloud" cx="450" cy="48" r="20" fill="white" />
+                <circle id="cloud" cx="370" cy="59" r="20" fill="white" />
+                <circle id="cloud" cx="390" cy="61" r="20" fill="white" />
+                <circle id="cloud" cx="410" cy="62" r="20" fill="white" />
+                <circle id="cloud" cx="430" cy="59" r="20" fill="white" />
+
+                <circle id="cloud" cx="630" cy="50" r="20" fill="white" />
+                <circle id="cloud" cx="650" cy="41" r="20" fill="white" />
+                <circle id="cloud" cx="670" cy="35" r="20" fill="white" />
+                <circle id="cloud" cx="690" cy="37" r="20" fill="white" />
+                <circle id="cloud" cx="710" cy="42" r="20" fill="white" />
+                <circle id="cloud" cx="730" cy="48" r="20" fill="white" />
+                <circle id="cloud" cx="650" cy="59" r="20" fill="white" />
+                <circle id="cloud" cx="670" cy="61" r="20" fill="white" />
+                <circle id="cloud" cx="690" cy="62" r="20" fill="white" />
+                <circle id="cloud" cx="710" cy="59" r="20" fill="white" />
+
+
+
+                <polygon id="star" points="50,5 20,99 95,39 5,39 80,99"
+style="fill:yellow;stroke:yellow;stroke-width:2;fill-rule:evenodd;" />
+
+<polygon id="star" points="440,5 400,99, 490,39 390,39 470,99"
+style="fill:yellow;stroke:yellow;stroke-width:2;fill-rule:evenodd;" />
+
+<polygon id="star" points="230,5 200,99, 280,39 180,39 260,99"
+style="fill:yellow;stroke:yellow;stroke-width:2;fill-rule:evenodd;" />
+
+<polygon id="star" points="640,5 600,99, 690,39 590,39 670,99"
+style="fill:yellow;stroke:yellow;stroke-width:2;fill-rule:evenodd;" />
+
+
+
+
+            </svg>
+
+
+
+        </header>
+
+        <article id="earth">
+
+            <svg width="700" height="200">
+                <circle id="sun" cx="350" cy="120" r="45" stroke="yellow" stroke-width="7" fill="yellow" />
+
+                <circle id="mountain" cx="170" cy="210" r="200" fill="rgb(126, 87, 37)" />
+
+                <circle id="mountain" cx="530" cy="250" r="200" fill="rgb(126, 87, 37)">
+
+                    
+                    
+            </svg>
+
+
+
+
+        </article>
+
+        <summary id="magma">
+            <svg >
+            <rect x="120" y="70" width="15" height="200" stroke="rgb(73, 45, 8)" stroke-width="6" fill="rgb(73, 45, 8)"/>
+        
+            <circle id="tree" cx="150" cy="80" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="130" cy="80" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="110" cy="80" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="170" cy="60" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="140" cy="50" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="120" cy="50" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="100" cy="50" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="150" cy="30" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="130" cy="30" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="110" cy="25" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="160" cy="30" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="130" cy="20" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="90" cy="60" r="20" fill="darkgreen"/>
+            <circle id="tree" cx="90" cy="40" r="20" fill="darkgreen"/>
+           
+
+            <circle id="flower" cx="200" cy="150" r="6" fill="red" />
+            <circle id="flower" cx="230" cy="140" r="6" fill="pink" />
+            <circle id="flower" cx="250" cy="145" r="6" fill="purple" />
+            <circle id="flower" cx="160" cy="130" r="6" fill="red" />
+            <circle id="flower" cx="180" cy="140" r="6" fill="purple" />
+            <circle id="flower" cx="150" cy="140" r="6" fill="pink" />
+            <circle id="flower" cx="30" cy="150" r="6" fill="purple" />
+            <circle id="flower" cx="100" cy="140" r="6" fill="pink" />
+            <circle id="flower" cx="90" cy="130" r="6" fill="red" />
+            <circle id="flower" cx="70" cy="140" r="6" fill="purple" />
+            <circle id="flower" cx="50" cy="140" r="6" fill="pink" />
+            <circle id="flower" cx="40" cy="135" r="6" fill="red" />
+            <circle id="flower" cx="290" cy="90" r="6" fill="pink" />
+            <circle id="flower" cx="275" cy="80" r="6" fill="purple" />
+            <circle id="flower" cx="260" cy="100" r="6" fill="red" />
+            <circle id="flower" cx="250" cy="90" r="6" fill="red" />
+            <circle id="flower" cx="275" cy="100" r="6" fill="purple" />
+            <circle id="flower" cx="250" cy="120" r="6" fill="pink" />
+
+
+
+        </svg>
+
+
+
+        </summary>
+
+
+    </div>
+    <div id="exp">
+        <p>The fact that I now draw with coding the picture I drew in every art class when 
+            I was little was something that I had never even thought of at the time. 
+            The sun setting over the mountains is like in fairy tales..</p>
+            <br>
+            When I designed this beautiful transition, this sentence came to my mind:
+            <br><br>
+            <p><b>"Ne güneş aya yetişebilir, ne de gece gündüzü geçebilir."</b></p>
+            
+        
+    </div>
+</body>
+
+</html>
